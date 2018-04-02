@@ -11,12 +11,21 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     public void logIn(View view){
-        EditText username = (EditText)findViewById(R.id.username_txtField);
-        EditText password = (EditText)findViewById(R.id.password_txtField);
+        EditText username = findViewById(R.id.username_txtField);
+        EditText password = findViewById(R.id.password_txtField);
         Log.i("Login value", username.getText().toString());
         Log.i("Login value", password.getText().toString());
         Log.i("Sign in:", "you clicked sign in");
-        Toast.makeText(getApplicationContext(), "Welcome back "+username.getText().toString(), Toast.LENGTH_LONG).show();
+        String msg; //The message that will be displayed in the toast
+        Button btn = findViewById(R.id.signIn_btn);
+        //Display the toast only if the button is pressed
+        if(btn.isPressed()) {
+            if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty())
+                msg = "Please enter you username and password!";
+            else
+                msg = "Welcome back " + username.getText().toString();
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

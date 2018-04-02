@@ -49,15 +49,16 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/SignIn_btn"
+        android:id="@+id/signIn_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/rememberMe_chkBtn"
-        android:layout_alignRight="@+id/rememberMe_chkBtn"
+        android:layout_alignLeft="@+id/rememberMe_chkBtn"
+        android:layout_alignStart="@+id/rememberMe_chkBtn"
         android:layout_below="@+id/rememberMe_chkBtn"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="82dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="85dp"
         android:onClick="logIn"
         android:text="Sign In" />
+
 </RelativeLayout>
